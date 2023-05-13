@@ -15,7 +15,6 @@ export default function PokemonList({ pokemons }: Props) {
     return (
         <div className="main__content">
             {pokemons.map((p: Pokemon, idx: number) => {
-                console.log(p);
                 return <Card key={idx} pokemon={p}></Card>
 
             })}

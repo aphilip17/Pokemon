@@ -9,7 +9,7 @@ export default function Card({ pokemon }: Props) {
   return (
     <div className='card__content'>
       <div className='card__header'>
-        <img src="" alt="" />
+        <img src={pokemon.image} alt={pokemon.name} />
       </div>
       <div className='card__body'> { pokemon.name }</div>
     </div>
