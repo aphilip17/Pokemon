@@ -6,8 +6,16 @@ interface Pokemon {
     url: string;
 }
 
+export interface PokemonSpec {
+    name: string;
+    image: string;
+    type: Array<any>;
+    abilities: Array<any>;
+    stats: Array<any>;
+}
+
 export function usePokemoncompletelist(data: Pokemon[]) {
-    const [pokemonsAll, setPokemonsAll] = useState([]);
+    const [pokemonsAll, setPokemonsAll] = useState<PokemonSpec[]>([]);
 
     function fetchPokemonsAll() {
         if (data) {
@@ -23,9 +31,9 @@ export function usePokemoncompletelist(data: Pokemon[]) {
                         type: r.types,
                         abilities: r.abilities,
                         stats: r.stats,
-                    }
+                    } as PokemonSpec
                 });
-                setPokemonsAll(pokeAll as any);
+                setPokemonsAll(pokeAll);
             });
         }
     }

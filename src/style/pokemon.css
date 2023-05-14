@@ -1,9 +1,45 @@
+.app__content {
+    display: flex;
+}
+
+.card-spec__content {
+    margin: 12px;
+    width: 30vw;
+    height: 80vh;
+    border-radius: 5px;
+    border: 1px solid #d5d4d4;
+    font-family: sans-serif;
+}
+
+.card__spec-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.card__spec {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #d5d4d4;
+    margin-left: 15px;
+    margin-right: 15px;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.card__spec-tile {
+    font-size: 0.9em;
+    color: grey;
+}
+
 .main__content {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     max-width: 70vw;
     margin: 12px;
+    justify-content: space-between;
 }
 
 .card__content {
